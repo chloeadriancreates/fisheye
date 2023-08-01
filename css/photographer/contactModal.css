@@ -1,0 +1,104 @@
+#modalContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(196, 196, 196, 0.4);
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.modal {
+    border-radius: 5px;
+    background-color: #DB8876;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(35rem / 16);
+    margin: auto;
+}
+
+.modal_title {
+    font-size: calc(64rem / 16);
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: calc(10rem / 16);
+}
+
+.modal_close {
+    font-size: calc(42rem / 16);
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal_closeLabel {
+    opacity: 0;
+    font-size: 1rem;
+    color: white;
+    margin-top: 0.5rem;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.modal_close:hover .modal_closeLabel,
+.modal_close:focus .modal_closeLabel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal_form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modal_form_label {
+    color: #312E2E;
+    font-size: calc(36rem / 16);
+}
+
+.modal_form_input {
+    width: 100%;
+    font-size: calc(40rem / 16);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: calc(10rem / 16);
+    font-family: "DM Sans", sans-serif;
+    font-size: calc(24rem / 16);
+    padding: calc(12rem / 16);
+}
+
+.modal_form_inputComment {
+    height: calc(100rem / 16);
+}
+
+.modal_form_input::placeholder {
+    font-family: "DM Sans", sans-serif;
+    font-size: calc(24rem / 16);
+    color: rgba(150, 150, 150, 1);
+}
+
+.modal_form_submit {
+    font-size: calc(18rem / 16);
+    padding: calc(23rem / 16) calc(50rem / 16);
+    margin-top: 5px;
+}

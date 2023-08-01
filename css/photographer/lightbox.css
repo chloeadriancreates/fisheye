@@ -1,0 +1,137 @@
+#lightbox {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 100vh;
+    width: 100vw;
+    padding: 62px;
+}
+
+.lightbox_contentContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+}
+
+.lightbox_media {
+    max-height: 95%;
+    max-width: 100%;
+}
+
+.lightbox_title {
+    margin-top: calc(12rem / 16);
+    color: #901C1C;
+    font-size: calc(24rem / 16);
+}
+
+.lightbox_previous {
+    margin-right: calc(36rem / 16);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.lightbox_next {
+    margin-left: calc(36rem / 16);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.lightbox_previousIcon, .lightbox_nextIcon {
+    font-size: calc(48rem / 16);
+    color: #901C1C;
+    cursor: pointer;
+}
+
+.lightbox_close {
+    font-size: calc(42rem / 16);
+    position: absolute;
+    top: 62px;
+    right: 62px;
+    color: #901C1C;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox_previousLabel, .lightbox_nextLabel, .lightbox_closeLabel {
+    opacity: 0;
+    font-size: 1rem;
+    color: #901C1C;
+    margin-top: 0.5rem;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.lightbox_previous:hover .lightbox_previousLabel,
+.lightbox_previous:focus .lightbox_previousLabel, 
+.lightbox_next:hover .lightbox_nextLabel,
+.lightbox_next:focus .lightbox_nextLabel, 
+.lightbox_close:hover .lightbox_closeLabel,
+.lightbox_close:focus .lightbox_closeLabel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideInNext {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideOutNext {
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes slideInPrevious {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes slideOutPrevious {
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+}
