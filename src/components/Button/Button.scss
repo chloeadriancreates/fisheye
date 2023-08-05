@@ -1,0 +1,23 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.button {
+    @include mixins.transition;
+    font-family: "DM Sans", sans-serif;
+    font-size: calc(20rem / 16);
+    font-weight: bold;
+    color: white;
+    padding: calc(11rem / 16);
+    border: none;
+    background-color: variables.$primary;
+    border-radius: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover, &:focus {
+        color: black;
+        background-color: variables.$secondary;
+    }
+}

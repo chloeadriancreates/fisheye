@@ -6,11 +6,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
 import Home from "./pages/Home/Home";
+import Profile from "./pages/Profile/Profile";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />
+  },
+  {
+    path: "/photographer/:id",
+    element: <Profile />
   }
 ]);
 

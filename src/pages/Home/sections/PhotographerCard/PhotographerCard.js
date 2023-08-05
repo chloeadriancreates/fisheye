@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function PhotographerCard({photographer}) {
     return (
-        <Link className="photographerCard" title={photographer.name}>
+        <Link to={`/photographer/${photographer.id}`} className="photographerCard" title={photographer.name}>
             <img
             src={`/img/photographers/${photographer.portrait}`} alt={photographer.name}
             className="photographerCard_portrait"

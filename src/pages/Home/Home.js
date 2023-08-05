@@ -1,9 +1,9 @@
 import "./Home.scss";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setData } from "../../app/slices/photographerSlice";
 import Header from "../../components/Header/Header";
-import PhotographerCard from "../../components/PhotographerCard/PhotographerCard";
+import PhotographerCard from "./sections/PhotographerCard/PhotographerCard";
+import { getData } from "../../utils/getData";
 
 export default function Home() {
     const { data } = useSelector(state => state.photographers);
@@ -11,12 +11,7 @@ export default function Home() {
 
     useEffect(() => {
         if(!data) {
-            const getPhotographers = async() => {
-                const response = await fetch("/data/photographers.json");
-                const responseJS = await response.json();
-                dispatch(setData(responseJS));
-            };
-            getPhotographers();
+            getData(dispatch);
         }
         console.log(data);
     }, [dispatch, data]);

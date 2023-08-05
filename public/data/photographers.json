@@ -3,8 +3,8 @@
 		{
 			"name": "Mimi Keel",
 			"id": 243,
-			"city": "London",
-			"country": "UK",
+			"city": "Londres",
+			"country": "Royaume-Uni",
 			"tagline": "Voir le beau dans le quotidien",
 			"rate": 400,
 			"portrait": "MimiKeel.jpg"
@@ -21,7 +21,7 @@
 		{
 			"name": "Tracy Galindo",
 			"id": 82,
-			"city": "Montreal",
+			"city": "Montréal",
 			"country": "Canada",
 			"tagline": "Photographe freelance",
 			"rate": 500,
@@ -39,8 +39,8 @@
 		{
 			"name": "Rhode Dubois",
 			"id": 925,
-			"city": "Barcelona",
-			"country": "Spain",
+			"city": "Barcelone",
+			"country": "Espagne",
 			"tagline": "Je crée des souvenirs",
 			"rate": 275,
 			"portrait": "RhodeDubois.jpg"
@@ -49,7 +49,7 @@
 			"name": "Marcel Nikolic",
 			"id": 195,
 			"city": "Berlin",
-			"country": "Germany",
+			"country": "Allemagne",
 			"tagline": "Toujours à la recherche de LA photo",
 			"rate": 300,
 			"portrait": "MarcelNikolic.jpg"

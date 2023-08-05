@@ -1,5 +1,5 @@
-@use "../../utils/mixins";
-@use "../../utils/variables";
+@use "../../../../utils/mixins";
+@use "../../../../utils/variables";
 
 .photographerCard {
     @include mixins.flex(column, center, center);
@@ -48,7 +48,7 @@
 
     &_rate {
         font-size: 0.9rem;
-        color: variables.$tertiary;
+        color: variables.$neutral-dark;
     }
 
     &:hover {

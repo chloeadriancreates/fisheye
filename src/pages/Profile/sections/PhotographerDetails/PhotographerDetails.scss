@@ -1,0 +1,44 @@
+@use "../../../../utils/mixins";
+@use "../../../../utils/variables";
+
+.photographerDetails {
+    @include mixins.flex(row, space-between, center);
+    background-color: variables.$neutral-light;
+    min-height: 300px;
+    margin: 40px 100px 0px 100px;
+    padding: 50px;
+
+    &_caption {
+        & > p:not(:last-of-type) {
+            margin-bottom: 0.8rem;
+        }
+
+        & > p:not(:first-of-type) {
+            margin-top: 0.8rem;
+        }
+
+        &_name {
+            font-size: 4rem;
+            color: variables.$secondary;
+            font-weight: normal;
+        }
+
+        &_location {
+            font-size: calc(24rem / 16);
+            color: variables.$primary;
+        }
+
+        &_tagline {
+            font-size: calc(18rem / 16);
+            color: variables.$neutral-dark;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &_portrait {
+        height: 300px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
