@@ -6,7 +6,7 @@
 			"city": "London",
 			"country": "UK",
 			"tagline": "Voir le beau dans le quotidien",
-			"price": 400,
+			"rate": 400,
 			"portrait": "MimiKeel.jpg"
 		},
 		{
@@ -15,7 +15,7 @@
 			"city": "Paris",
 			"country": "France",
 			"tagline": "Capturer des compositions complexes",
-			"price": 250,
+			"rate": 250,
 			"portrait": "EllieRoseWilkens.jpg"
 		},
 		{
@@ -24,7 +24,7 @@
 			"city": "Montreal",
 			"country": "Canada",
 			"tagline": "Photographe freelance",
-			"price": 500,
+			"rate": 500,
 			"portrait": "TracyGalindo.jpg"
 		},
 		{
@@ -33,7 +33,7 @@
 			"city": "Mexico City",
 			"country": "Mexico",
 			"tagline": "Toujours aller de l'avant",
-			"price": 350,
+			"rate": 350,
 			"portrait": "NabeelBradford.jpg"
 		},
 		{
@@ -42,7 +42,7 @@
 			"city": "Barcelona",
 			"country": "Spain",
 			"tagline": "Je crée des souvenirs",
-			"price": 275,
+			"rate": 275,
 			"portrait": "RhodeDubois.jpg"
 		},
 		{
@@ -51,7 +51,7 @@
 			"city": "Berlin",
 			"country": "Germany",
 			"tagline": "Toujours à la recherche de LA photo",
-			"price": 300,
+			"rate": 300,
 			"portrait": "MarcelNikolic.jpg"
 		}
 	],
@@ -62,8 +62,7 @@
 			"title": "Fashion Yellow Beach",
 			"image": "Fashion_Yellow_Beach.jpg",
 			"likes": 62,
-			"date": "2011-12-08",
-			"price": 55
+			"date": "2011-12-08"
 		},
 		{
 			"id": 8520927,
@@ -71,8 +70,7 @@
 			"title": "Fashion Urban Jungle",
 			"image": "Fashion_Urban_Jungle.jpg",
 			"likes": 11,
-			"date": "2011-11-06",
-			"price": 55
+			"date": "2011-11-06"
 		},
 		{
 			"id": 9025895,
@@ -80,8 +78,7 @@
 			"title": "Fashion Pattern on a Pattern",
 			"image": "Fashion_Pattern_on_Pattern.jpg",
 			"likes": 72,
-			"date": "2013-08-12",
-			"price": 55
+			"date": "2013-08-12"
 		},
 		{
 			"id": 9275938,
@@ -89,8 +86,7 @@
 			"title": "Wedding Gazebo",
 			"image": "Event_WeddingGazebo.jpg",
 			"likes": 69,
-			"date": "2018-02-22",
-			"price": 55
+			"date": "2018-02-22"
 		},
 		{
 			"id": 2053494,
@@ -98,8 +94,7 @@
 			"title": "Sparkles",
 			"image": "Event_Sparklers.jpg",
 			"likes": 2,
-			"date": "2020-05-25",
-			"price": 55
+			"date": "2020-05-25"
 		},
 		{
 			"id": 7324238,
@@ -108,7 +103,7 @@
 			"image": "Event_18thAnniversary.jpg",
 			"likes": 33,
 			"date": "2019-06-12",
-			"price": 55
+			"rate": 55
 		},
 		{
 			"id": 8328953,
@@ -116,8 +111,7 @@
 			"title": "Wooden sculpture of a horse",
 			"video": "Art_Wooden_Horse_Sculpture.mp4",
 			"likes": 24,
-			"date": "2011-12-08",
-			"price": 100
+			"date": "2011-12-08"
 		  },
 		{
 			"id": 7502053,
@@ -125,8 +119,7 @@
 			"title": "Triangle Man",
 			"image": "Art_Triangle_Man.jpg",
 			"likes": 88,
-			"date": "2007-05-07",
-			"price": 55
+			"date": "2007-05-07"
 		},
 		{
 			"id": 8523492,
@@ -134,8 +127,7 @@
 			"title": "Purple Tunnel",
 			"image": "Art_Purple_light.jpg",
 			"likes": 24,
-			"date": "2018-05-05",
-			"price": 55
+			"date": "2018-05-05"
 		},
 		{
 			"id": 75902334,
@@ -143,8 +135,7 @@
 			"title": "Art Mine",
 			"image": "Art_Mine.jpg",
 			"likes": 75,
-			"date": "2019-11-25",
-			"price": 55
+			"date": "2019-11-25"
 		},
 
 		{
@@ -153,8 +144,7 @@
 			"title": "8 Rows",
 			"image": "Sport_2000_with_8.jpg",
 			"likes": 52,
-			"date": "2013-02-28",
-			"price": 70
+			"date": "2013-02-28"
 		},
 		{
 			"id": 92758372,
@@ -162,8 +152,7 @@
 			"title": "Fashion Wings",
 			"image": "Fashion_Wings.jpg",
 			"likes": 58,
-			"date": "2018-07-17",
-			"price": 70
+			"date": "2018-07-17"
 		},
 		{
 			"id": 32958383,
@@ -171,8 +160,7 @@
 			"title": "Melody Red on Stripes",
 			"image": "Fashion_Melody_Red_on_Stripes.jpg",
 			"likes": 11,
-			"date": "2019-08-12",
-			"price": 70
+			"date": "2019-08-12"
 		},
 		{
 			"id": 928587383,
@@ -180,8 +168,7 @@
 			"title": "Venture Conference",
 			"image": "Event_VentureConference.jpg",
 			"likes": 2,
-			"date": "2019-01-02",
-			"price": 70
+			"date": "2019-01-02"
 		},
 		{
 			"id": 725639493,
@@ -189,8 +176,7 @@
 			"title": "Product Pitch",
 			"image": "Event_ProductPitch.jpg",
 			"likes": 3,
-			"date": "2019-05-20",
-			"price": 70
+			"date": "2019-05-20"
 		},
 		{
 			"id": 23394384,
@@ -198,8 +184,7 @@
 			"title": "Musical Festival Keyboard",
 			"image": "Event_KeyboardCheck.jpg",
 			"likes": 52,
-			"date": "2019-07-18",
-			"price": 70
+			"date": "2019-07-18"
 		},
 		{
 			"id": 87367293,
@@ -207,8 +192,7 @@
 			"title": "Musical Festival Singer",
 			"image": "Event_Emcee.jpg",
 			"likes": 23,
-			"date": "2018-02-22",
-			"price": 70
+			"date": "2018-02-22"
 		},
 		{
 			"id": 593834784,
@@ -216,8 +200,7 @@
 			"title": "Animal Majesty",
 			"image": "Animals_Majesty.jpg",
 			"likes": 52,
-			"date": "2017-03-13",
-			"price": 70
+			"date": "2017-03-13"
 		},
 		{
 			"id": 83958935,
@@ -225,8 +208,7 @@
 			"title": "Cute puppy on sunset",
 			"video": "Animals_Puppiness.mp4",
 			"likes": 52,
-			"date": "2016-06-12",
-			"price": 70
+			"date": "2016-06-12"
 		},
 		{
 			"id": 394583434,
@@ -234,8 +216,7 @@
 			"title": "Rocky mountains from the air",
 			"video": "Travel_Rock_Mountains.mp4",
 			"likes": 23,
-			"date": "2017-03-18",
-			"price": 45
+			"date": "2017-03-18"
 		},
 		{
 			"id": 343423425,
@@ -243,8 +224,7 @@
 			"title": "Outdoor Baths",
 			"image": "Travel_Outdoor_Baths.jpg",
 			"likes": 101,
-			"date": "2017-04-03",
-			"price": 45
+			"date": "2017-04-03"
 		},
 		{
 			"id": 73434243,
@@ -252,8 +232,7 @@
 			"title": "Road into the Hill",
 			"image": "Travel_Road_into_Hill.jpg",
 			"likes": 99,
-			"date": "2018-04-30",
-			"price": 45
+			"date": "2018-04-30"
 		},
 		{
 			"id": 23425523,
@@ -261,8 +240,7 @@
 			"title": "Bridge into the Forest",
 			"image": "Travel_Bridge_into_Forest.jpg",
 			"likes": 34,
-			"date": "2016-04-05",
-			"price": 45
+			"date": "2016-04-05"
 		},
 		{
 			"id": 23134513,
@@ -270,8 +248,7 @@
 			"title": "Boat Wonderer",
 			"image": "Travel_Boat_Wanderer.jpg",
 			"likes": 23,
-			"date": "2017-03-18",
-			"price": 45
+			"date": "2017-03-18"
 		},
 		{
 			"id": 92352352,
@@ -279,8 +256,7 @@
 			"title": "Portrait Sunkiss",
 			"image": "Portrait_Sunkissed.jpg",
 			"likes": 66,
-			"date": "2018-05-24",
-			"price": 45
+			"date": "2018-05-24"
 		},
 		{
 			"id": 34513453,
@@ -288,8 +264,7 @@
 			"title": "Shaw Potrait",
 			"image": "Portrait_Shaw.jpg",
 			"likes": 52,
-			"date": "2017-04-21",
-			"price": 45
+			"date": "2017-04-21"
 		},
 		{
 			"id": 23523533,
@@ -297,8 +272,7 @@
 			"title": "Alexandra",
 			"image": "Portrait_Alexandra.jpg",
 			"likes": 95,
-			"date": "2018-11-02",
-			"price": 45
+			"date": "2018-11-02"
 		},
 		{
 			"id": 525834234,
@@ -306,8 +280,7 @@
 			"title": "Afternoon Break",
 			"image": "Portrait_AfternoonBreak.jpg",
 			"likes": 25,
-			"date": "2019-01-02",
-			"price": 45
+			"date": "2019-01-02"
 		},
 
 		{
@@ -316,8 +289,7 @@
 			"title": "Lonesome",
 			"image": "Travel_Lonesome.jpg",
 			"likes": 88,
-			"date": "2019-02-03",
-			"price": 45
+			"date": "2019-02-03"
 		},
 		{
 			"id": 625025343,
@@ -325,17 +297,15 @@
 			"title": "Hillside Color",
 			"image": "Travel_HillsideColor.jpg",
 			"likes": 85,
-			"date": "2019-04-03",
-			"price": 45
+			"date": "2019-04-03"
 		},
 		{
 			"id": 2525345343,
 			"photographerId": 243,
-			"title": "Wednesday Potrait",
+			"title": "Wednesday Portrait",
 			"image": "Portrait_Wednesday.jpg",
 			"likes": 34,
-			"date": "2019-04-07",
-			"price": 45
+			"date": "2019-04-07"
 		},
 		{
 			"id": 2523434634,
@@ -343,8 +313,7 @@
 			"title": "Nora Portrait",
 			"image": "Portrait_Nora.jpg",
 			"likes": 63,
-			"date": "2019-04-07",
-			"price": 45
+			"date": "2019-04-07"
 		},
 		{
 			"id": 398847109,
@@ -352,8 +321,7 @@
 			"title": "Raw Black Portrait",
 			"image": "Portrait_Background.jpg",
 			"likes": 55,
-			"date": "2019-06-20",
-			"price": 45
+			"date": "2019-06-20"
 		},
 		{
 			"id": 2534342,
@@ -361,8 +329,7 @@
 			"title": "Seaside Wedding",
 			"image": "Event_SeasideWedding.jpg",
 			"likes": 25,
-			"date": "2019-06-21",
-			"price": 45
+			"date": "2019-06-21"
 		},
 		{
 			"id": 65235234,
@@ -370,8 +337,7 @@
 			"title": "Boulder Wedding",
 			"image": "Event_PintoWedding.jpg",
 			"likes": 52,
-			"date": "2019-06-25",
-			"price": 45
+			"date": "2019-06-25"
 		},
 		{
 			"id": 23523434,
@@ -379,8 +345,7 @@
 			"title": "Benevides Wedding",
 			"image": "Event_BenevidesWedding.jpg",
 			"likes": 77,
-			"date": "2019-06-28",
-			"price": 45
+			"date": "2019-06-28"
 		},
 		{
 			"id": 5234343,
@@ -388,8 +353,7 @@
 			"title": "Wild horses in the mountains",
 			"video": "Animals_Wild_Horses_in_the_mountains.mp4",
 			"likes": 142,
-			"date": "2019-08-23",
-			"price": 60
+			"date": "2019-08-23"
 		  },
 		{
 			"id": 95234343,
@@ -397,8 +361,7 @@
 			"title": "Rainbow Bird",
 			"image": "Animals_Rainbow.jpg",
 			"likes": 59,
-			"date": "2019-07-02",
-			"price": 60
+			"date": "2019-07-02"
 		},
 
 		{
@@ -407,17 +370,15 @@
 			"title": "Japanese Tower, Kyoto",
 			"image": "Travel_Tower.jpg",
 			"likes": 25,
-			"date": "2019-04-03",
-			"price": 60
+			"date": "2019-04-03"
 		},
 		{
 			"id": 2523434,
 			"photographerId": 195,
-			"title": "Senset on Canals, Venice",
+			"title": "Sunset on Canals, Venice",
 			"image": "Travel_SunsetonCanals.jpg",
 			"likes": 53,
-			"date": "2019-05-06",
-			"price": 60
+			"date": "2019-05-06"
 		},
 		{
 			"id": 95293534,
@@ -425,17 +386,15 @@
 			"title": "Mountain and Lake",
 			"image": "Travel_OpenMountain.jpg",
 			"likes": 33,
-			"date": "2019-05-12",
-			"price": 60
+			"date": "2019-05-12"
 		},
 		{
 			"id": 356234343,
 			"photographerId": 195,
-			"title": "City Bike and Stair, Paris",
+			"title": "City Bike and Stairs, Paris",
 			"image": "Travel_Bike_and_Stair.jpg",
 			"likes": 53,
-			"date": "2019-06-20",
-			"price": 60
+			"date": "2019-06-20"
 		},
 		{
 			"id": 235234343,
@@ -443,8 +402,7 @@
 			"title": "Adventure Door, India",
 			"image": "Travel_Adventure_Door.jpg",
 			"likes": 63,
-			"date": "2019-06-26",
-			"price": 60
+			"date": "2019-06-26"
 		},
 		{
 			"id": 6234234343,
@@ -452,8 +410,7 @@
 			"title": "Contrast, St Petersburg",
 			"image": "Architecture_Contrast.jpg",
 			"likes": 52,
-			"date": "2019-06-30",
-			"price": 60
+			"date": "2019-06-30"
 		},
 		{
 			"id": 6525666253,
@@ -461,8 +418,7 @@
 			"title": "On a Hill, Tibet",
 			"image": "Architecture_On_a_hill.jpg",
 			"likes": 63,
-			"date": "2019-07-20",
-			"price": 60
+			"date": "2019-07-20"
 		},
 		{
 			"id": 98252523433,
@@ -470,17 +426,15 @@
 			"title": "Leaning Tower, Pisa",
 			"image": "Architecture_Dome.jpg",
 			"likes": 88,
-			"date": "2020-01-05",
-			"price": 60
+			"date": "2020-01-05"
 		},
 		{
 			"id": 9259398453,
 			"photographerId": 195,
-			"title": "Drone shot of Buenos Aires highways",
+			"title": "Drone shot of Buenos Aires highway",
 			"video": "Architecture_coverr_circle_empty_highway_in_buenos_aires_587740985637.mp4",
 			"likes": 57,
-			"date": "2020-01-20",
-			"price": 65
+			"date": "2020-01-20"
 		  },
 		{
 			"id": 3523523534,
@@ -488,17 +442,15 @@
 			"title": "Corner Building and Blue Sky",
 			"image": "Architecture_Corner_Room.jpg",
 			"likes": 54,
-			"date": "2020-05-05",
-			"price": 60
+			"date": "2020-05-05"
 		},
 		{
 			"id": 952343423,
 			"photographerId": 930,
-			"title": "Tricks in te air",
+			"title": "Tricks in the air",
 			"video": "Sport_Tricks_in_the_air.mp4",
 			"likes": 150,
-			"date": "2018-02-30",
-			"price": 70
+			"date": "2018-02-30"
 		  },
 		{
 			"id": 235234343,
@@ -506,8 +458,7 @@
 			"title": "Climber",
 			"image": "Sport_Next_Hold.jpg",
 			"likes": 101,
-			"date": "2018-03-05",
-			"price": 65
+			"date": "2018-03-05"
 		},
 		{
 			"id": 235343222,
@@ -515,8 +466,7 @@
 			"title": "Surfer",
 			"image": "sport_water_tunnel.jpg",
 			"likes": 103,
-			"date": "2018-03-10",
-			"price": 70
+			"date": "2018-03-10"
 		},
 		{
 			"id": 7775342343,
@@ -524,8 +474,7 @@
 			"title": "Skier",
 			"image": "Sport_Sky_Cross.jpg",
 			"likes": 77,
-			"date": "2018-04-16",
-			"price": 50
+			"date": "2018-04-16"
 		},
 		{
 			"id": 9253445784,
@@ -533,8 +482,7 @@
 			"title": "Race End",
 			"image": "Sport_Race_End.jpg",
 			"likes": 88,
-			"date": "2018-04-22",
-			"price": 65
+			"date": "2018-04-22"
 		},
 		{
 			"id": 22299394,
@@ -542,8 +490,7 @@
 			"title": "Jump!",
 			"image": "Sport_Jump.jpg",
 			"likes": 95,
-			"date": "2018-04-27",
-			"price": 70
+			"date": "2018-04-27"
 		},
 		{
 			"id": 3452342633,
@@ -551,8 +498,7 @@
 			"title": "White Light",
 			"image": "Architecture_White_Light.jpg",
 			"likes": 52,
-			"date": "2018-05-03",
-			"price": 75
+			"date": "2018-05-03"
 		},
 		{
 			"id": 939234243,
@@ -560,8 +506,7 @@
 			"title": "Water on Modern Building",
 			"image": "Architecture_Water_on_Modern.jpg",
 			"likes": 55,
-			"date": "2018-05-10",
-			"price": 72
+			"date": "2018-05-10"
 		},
 		{
 			"id": 222959233,
@@ -569,8 +514,7 @@
 			"title": "Horseshoe",
 			"image": "Architecture_Horseshoe.jpg",
 			"likes": 85,
-			"date": "2018-05-15",
-			"price": 71
+			"date": "2018-05-15"
 		},
 		{
 			"id": 965933434,
@@ -578,8 +522,7 @@
 			"title": "Cross Bar",
 			"image": "Architecture_Cross_Bar.jpg",
 			"likes": 66,
-			"date": "2018-05-20",
-			"price": 58
+			"date": "2018-05-20"
 		},
 		{
 			"id": 777723343,
@@ -587,8 +530,7 @@
 			"title": "Connected Curves",
 			"image": "Architecture_Connected_Curves.jpg",
 			"likes": 79,
-			"date": "2018-05-21",
-			"price": 80
+			"date": "2018-05-21"
 		}
 	]
 }

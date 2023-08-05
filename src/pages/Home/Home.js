@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setData } from "../../app/slices/photographerSlice";
 import Header from "../../components/Header/Header";
+import PhotographerCard from "../../components/PhotographerCard/PhotographerCard";
 
 export default function Home() {
     const { data } = useSelector(state => state.photographers);
@@ -23,6 +24,9 @@ export default function Home() {
     return (
         <div>
             <Header />
+            <section className="photographerList">
+                { data && data.photographers.map(photographer => <PhotographerCard key={photographer.id} photographer={photographer} />) }
+            </section>
         </div>
     );
 }
