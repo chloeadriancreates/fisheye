@@ -4,13 +4,17 @@
 .button {
     @include mixins.transition;
     font-family: "DM Sans", sans-serif;
-    font-size: calc(20rem / 16);
+    font-size: 1rem;
     font-weight: bold;
     color: white;
-    padding: calc(11rem / 16);
+    padding: 1rem;
     border: none;
     background-color: variables.$primary;
     border-radius: 5px;
+
+    @include mixins.mobileAndUp {
+        font-size: calc(22rem / 16);
+    }
 
     &:hover {
         cursor: pointer;

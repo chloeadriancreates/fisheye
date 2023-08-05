@@ -33,7 +33,7 @@ export default function Profile() {
     return (
         <div>
             <Header />
-            <PhotographerDetails photographer={photographer} />
+            { photographer && <PhotographerDetails photographer={photographer} /> }
         </div>
     );
 }
