@@ -2,43 +2,80 @@
 @use "../../../../utils/variables";
 
 .photographerDetails {
-    @include mixins.flex(row, space-between, center);
+    @include mixins.flex(column, center, flex-start);
     background-color: variables.$neutral-light;
     min-height: 300px;
-    margin: 40px 100px 0px 100px;
-    padding: 50px;
+    margin: 20px 60px;
+
+    @include mixins.smallLaptopAndUp {
+        @include mixins.flex(row-reverse, space-between, center);
+        margin: 40px 100px;
+        padding: 50px;
+    }
 
     &_caption {
-        & > p:not(:last-of-type) {
-            margin-bottom: 0.8rem;
+        margin: 30px;
+
+        @include mixins.smallLaptopAndUp {
+            margin: 0;
         }
 
-        & > p:not(:first-of-type) {
-            margin-top: 0.8rem;
+        & > p:not(:last-child):not(.photographerDetails_caption_tagline) {
+            margin-bottom: 0.7rem;
+        }
+
+        & > p:not(:first-child) {
+            margin-top: 0.7rem;
         }
 
         &_name {
-            font-size: 4rem;
+            font-size: 2rem;
             color: variables.$secondary;
             font-weight: normal;
+
+            @include mixins.mobileAndUp {
+                font-size: 3rem;
+            }
+
+            @include mixins.smallLaptopAndUp {
+                font-size: 4rem;
+            }
         }
 
         &_location {
-            font-size: calc(24rem / 16);
+            font-size: 1rem;
             color: variables.$primary;
+
+            @include mixins.mobileAndUp {
+                font-size: calc(22rem / 16);
+            }
         }
 
         &_tagline {
-            font-size: calc(18rem / 16);
+            font-size: 1rem;
             color: variables.$neutral-dark;
             margin-bottom: 2rem;
+
+            @include mixins.mobileAndUp {
+                font-size: calc(22rem / 16);
+            }
         }
     }
 
     &_portrait {
-        height: 300px;
+        width: 100%;
         aspect-ratio: 1 / 1;
         object-fit: cover;
-        border-radius: 50%;
+
+        @include mixins.mobileAndUp {
+            aspect-ratio: 16 / 9;
+        }
+
+        @include mixins.smallLaptopAndUp {
+            width: 300px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            margin-left: 30px;
+        }
     }
 }
