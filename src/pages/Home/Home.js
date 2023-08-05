@@ -2,6 +2,7 @@ import "./Home.scss";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setData } from "../../app/slices/photographerSlice";
+import Header from "../../components/Header/Header";
 
 export default function Home() {
     const { data } = useSelector(state => state.photographers);
@@ -20,6 +21,8 @@ export default function Home() {
     }, [dispatch, data]);
 
     return (
-        <div>Hi!</div>
+        <div>
+            <Header />
+        </div>
     );
 }

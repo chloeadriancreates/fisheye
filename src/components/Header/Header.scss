@@ -1,0 +1,27 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.header {
+    @include mixins.flex(row, center, center);
+    margin: 45px 100px 45px 100px;
+
+    @include mixins.tabletAndUp {
+        justify-content: space-between;
+    }
+
+    &_link {
+        &_logo {
+            height: 50px;
+        }
+    }
+
+    &_title {
+        color: #901C1C;
+        font-size: 2rem;
+        display: none;
+
+        @include mixins.tabletAndUp {
+            display: block;
+        }
+    }
+}
