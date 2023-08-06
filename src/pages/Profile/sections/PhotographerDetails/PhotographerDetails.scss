@@ -54,10 +54,11 @@
         &_tagline {
             font-size: 1rem;
             color: variables.$neutral-dark;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
 
             @include mixins.mobileAndUp {
                 font-size: calc(22rem / 16);
+                margin-bottom: 2rem;
             }
         }
     }

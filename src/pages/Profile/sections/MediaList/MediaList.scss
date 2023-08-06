@@ -3,16 +3,138 @@
 
 .mediaList {
     margin: 60px;
-    display: grid;
-    grid-gap: 30px 90px;
-    grid-template-columns: repeat(1, 1fr);
-
-    @include mixins.tabletAndUp {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     @include mixins.laptopAndUp {
         margin: 60px 100px;
-        grid-template-columns: repeat(3, 1fr);
     }
+
+    &_sorter {
+        @include mixins.flex(row, center, center);
+        margin-bottom: 40px;
+
+        @include mixins.mobileAndUp {
+            justify-content: flex-start;
+        }
+
+        &_label {
+            font-weight: 700;
+            font-size: 0.8rem;
+
+            @include mixins.mobileAndUp {
+                font-size: calc(18rem / 16);
+            }
+        }
+
+        &_select {
+            margin-left: 0.8rem;
+            position: relative;
+            width: fit-content;
+
+            @include mixins.mobileAndUp {
+                font-size: calc(18rem / 16);
+            }
+
+            &_button {
+                @include mixins.flex(row, space-between, center);
+                font-size: 0.8rem;
+                width: calc(120rem / 16);
+
+                @include mixins.mobileAndUp {
+                    font-size: calc(18rem / 16);
+                    width: calc(180rem / 16);
+                }
+            }
+
+            &_listbox {
+                @include mixins.flex(column, flex-start, flex-start);
+                position: absolute;
+                background-color: variables.$primary;
+                color: white;
+                font-weight: 700;
+                font-size: 0.8rem;
+                font-family: "DM Sans", sans-serif;
+                height: calc(60rem / 16);
+                width: 100%;
+                border-radius: 5px;
+                top: 0;
+                left: 0;
+                margin: 0;
+                padding: 0;
+                z-index: 2;
+
+                @include mixins.mobileAndUp {
+                    font-size: calc(18rem / 16);
+                }
+
+                &_option {
+                    @include mixins.flex;
+                    @include mixins.transition;
+                    padding: 1rem;
+                    width: 100%;
+                    height: calc(60rem / 16);
+                    position: relative;
+                    background-color: variables.$primary;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 0.8rem;
+                    font-family: "DM Sans", sans-serif;
+                    border: none;
+                    box-shadow: none;
+
+                    @include mixins.mobileAndUp {
+                        font-size: calc(18rem / 16);
+                    }
+
+                    &:hover, &:focus {
+                        cursor: pointer;
+                        color: black;
+                        background-color: variables.$secondary;
+                    }
+
+                    &:first-child {
+                        border-radius: 5px 5px 0px 0px;
+                        justify-content: space-between;
+                    }
+
+                    &:not(:first-child) {
+                        @include mixins.flex(column, center, flex-start);
+                    }
+
+                    &:not(:first-child):before {
+                        content: "";
+                        width: calc(100% - (40rem / 16));
+                        height: 1px;
+                        background-color: white;
+                        position: absolute;
+                        top: 0;
+                    }
+
+                    &:last-child {
+                        border-radius: 0px 0px 5px 5px;
+                    }
+
+                    &_icon {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &_container {
+        // margin: 60px;
+        display: grid;
+        grid-gap: 30px 90px;
+        grid-template-columns: repeat(1, 1fr);
+
+        @include mixins.tabletAndUp {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mixins.laptopAndUp {
+            // margin: 60px 100px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
 }
