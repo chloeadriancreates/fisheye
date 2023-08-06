@@ -64,7 +64,8 @@
                     color: variables.$neutral-dark;
                 }
 
-                &:hover, &:focus {
+                &:hover {
+                    cursor: pointer;
                     color: variables.$secondary;
                 }
             }

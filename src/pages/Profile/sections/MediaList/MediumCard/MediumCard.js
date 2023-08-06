@@ -1,7 +1,11 @@
 import "./MediumCard.scss";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { toggleLike } from "../../../../../app/slices/photographerSlice";
 
 export default function MediumCard({medium}) {
+    const dispatch = useDispatch();
+
     return (
         <article className="mediumCard">
             <Link className="mediumCard_thumbnail" title={`${medium.title}, close-up view`}>
@@ -32,7 +36,10 @@ export default function MediumCard({medium}) {
                 <p className="mediumCard_caption_title" lang="en">{medium.title}</p>
                 <div className="mediumCard_caption_like">
                     <p className="mediumCard_caption_like_text">{medium.likes}</p>
-                    <button className={`mediumCard_caption_like_button mediumCard_caption_like_button${medium.liked ? "--liked" : "--notLiked"}`} aria-label="likes" lang="en">
+                    <button
+                    onClick={() => dispatch(toggleLike({id: medium.id}))}
+                    className={`mediumCard_caption_like_button mediumCard_caption_like_button${medium.liked ? "--liked" : "--notLiked"}`} aria-label="likes" lang="en"
+                    >
                         <i className="fas fa-heart"></i>
                     </button>
                 </div>
