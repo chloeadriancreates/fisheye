@@ -1,0 +1,73 @@
+@use "../../../../../utils/mixins";
+@use "../../../../../utils/variables";
+
+.mediumCard {
+
+    &_thumbnail {
+        @include mixins.transition;
+        @include mixins.resetLink;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+
+        &_medium {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        &_alert {
+            @include mixins.transition;
+            content: "Ouvrir la galerie";
+            position: absolute;
+            top: 0;
+            transform: translateY(-5rem);
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: calc(24rem / 16);
+            background-color: variables.$secondary;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover &_alert, &:focus &_alert {
+            transform: translateY(0);
+        }
+    }
+
+    &_caption {
+        @include mixins.flex(row, space-between, center);
+        font-size: calc(24rem / 16);
+        margin-top: calc(10rem / 16);
+
+        &_like {
+            @include mixins.flex;
+            margin-left: 1rem;
+
+            &_button {
+                margin-left: 0.5rem;
+                border: none;
+                background: none;
+                padding: 0;
+                transition: color 0.3s ease;
+                font-size: calc(18rem / 16);
+
+                &--liked {
+                    color: variables.$primary;
+                }
+
+                &--notLiked {
+                    color: variables.$neutral-dark;
+                }
+
+                &:hover, &:focus {
+                    color: variables.$secondary;
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,1 @@
 @use "../../utils/mixins";
-
-.photographerList {
-    @include mixins.flex(row, space-between, flex-start);
-    flex-wrap: wrap;
-    margin: 0px 100px;
-}

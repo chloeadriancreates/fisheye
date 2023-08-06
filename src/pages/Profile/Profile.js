@@ -2,9 +2,10 @@ import "./Profile.scss";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import Header from "../../components/Header/Header";
 import { getData } from "../../utils/getData";
+import Header from "../../components/Header/Header";
 import PhotographerDetails from "./sections/PhotographerDetails/PhotographerDetails";
+import MediaList from "./sections/MediaList/MediaList";
 
 export default function Profile() {
     const dispatch = useDispatch();
@@ -34,6 +35,7 @@ export default function Profile() {
         <div>
             <Header />
             { photographer && <PhotographerDetails photographer={photographer} /> }
+            { media && <MediaList media={media} /> }
         </div>
     );
 }
