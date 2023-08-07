@@ -22,6 +22,7 @@
         margin-top: calc(20rem / 16);
         line-height: 1.2;
         text-align: center;
+        color: variables.$secondary;
 
         @include mixins.tinyScreens {
             font-size: 1.5rem;

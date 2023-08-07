@@ -1,0 +1,22 @@
+@use "../../../../utils/mixins";
+@use "../../../../utils/variables";
+
+.likeTracker {
+    @include mixins.flex(row, space-between, center);
+    position: fixed;
+    bottom: 0;
+    right: 2.5rem;
+    background-color: variables.$secondary;
+    border-radius: 5px 5px 0px 0px;
+    padding: 1rem 2rem;
+    font-size: calc(24rem / 16);
+
+    &_likes {
+        @include mixins.flex;
+        margin-right: 4rem;
+
+        &_icon {
+            margin-left: 0.5rem;
+        }
+    }
+}

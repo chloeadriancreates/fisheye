@@ -6,6 +6,7 @@ import { getData } from "../../utils/getData";
 import Header from "../../components/Header/Header";
 import PhotographerDetails from "./sections/PhotographerDetails/PhotographerDetails";
 import MediaList from "./sections/MediaList/MediaList";
+import LikeTracker from "./sections/LikeTracker/LikeTracker";
 
 export default function Profile() {
     const dispatch = useDispatch();
@@ -35,7 +36,8 @@ export default function Profile() {
         <div>
             <Header />
             { photographer && <PhotographerDetails photographer={photographer} /> }
-            { media && <MediaList media={media} /> }
+            { media && <MediaList photographerId={id} /> }
+            { photographer && <LikeTracker rate={photographer.rate} likes={photographer.totalLikes} /> }
         </div>
     );
 }
