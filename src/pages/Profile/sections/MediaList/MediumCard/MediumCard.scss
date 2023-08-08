@@ -43,8 +43,12 @@
 
     &_caption {
         @include mixins.flex(row, space-between, center);
-        font-size: calc(24rem / 16);
+        font-size: 1rem;
         margin-top: calc(10rem / 16);
+
+        @include mixins.mobileAndUp {
+            font-size: calc(24rem / 16);
+        }
 
         &_like {
             @include mixins.flex;

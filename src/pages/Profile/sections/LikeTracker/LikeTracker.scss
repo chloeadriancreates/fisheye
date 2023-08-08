@@ -5,15 +5,25 @@
     @include mixins.flex(row, space-between, center);
     position: fixed;
     bottom: 0;
-    right: 2.5rem;
     background-color: variables.$secondary;
     border-radius: 5px 5px 0px 0px;
     padding: 1rem 2rem;
-    font-size: calc(24rem / 16);
+    font-size: calc(20rem / 16);
+    width: 100%;
+
+    @include mixins.mobileAndUp {
+        font-size: calc(24rem / 16);
+        width: fit-content;
+        right: 2.5rem;
+        
+    }
 
     &_likes {
         @include mixins.flex;
-        margin-right: 4rem;
+
+        @include mixins.tabletAndUp {
+            margin-right: 4rem;
+        }
 
         &_icon {
             margin-left: 0.5rem;
