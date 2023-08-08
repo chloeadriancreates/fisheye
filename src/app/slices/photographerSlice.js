@@ -10,8 +10,8 @@ export const photographerSlice = createSlice({
       state.data = action.payload;
     },
     toggleLike: (state, action) => {
-      const medium = state.data.media.find(medium => medium.id === parseInt(action.payload.id));
-      const photographer = state.data.photographers.find(photographer => photographer.id === medium.photographerId);
+      const photographer = state.data.photographers.find(photographer => photographer.id === parseInt(action.payload.medium.photographerId));
+      const medium = photographer.media.list.find(medium => medium.id === parseInt(action.payload.medium.id));
       if(medium.liked) {
         medium.likes--;
         photographer.totalLikes--;
@@ -21,11 +21,35 @@ export const photographerSlice = createSlice({
       }
       medium.liked = !medium.liked;
     },
-    updateSorting: (state, action) => {
-      state.data.sorting = action.payload.sorting;
+    sortMedia: (state, action) => {
+      const photographer = state.data.photographers.find(photographer => photographer.id === parseInt(action.payload.photographerId));
+      const sortByDate = (a, b) => {
+          const aDate = new Date(a.date);
+          const bDate = new Date(b.date);
+          return bDate - aDate;
+      };
+      const sortByPopularity = (a, b) => {
+          return b.likes - a.likes;
+      };
+      const sortByTitle = (a, b) => {
+          return a.title.localeCompare(b.title);
+      };
+
+      switch(action.payload.sorting) {
+          case "Date":
+              photographer.media.list = photographer.media.list.sort(sortByDate);
+              break;
+          case "Titre":
+              photographer.media.list = photographer.media.list.sort(sortByTitle);
+              break;
+          default:
+              photographer.media.list = photographer.media.list.sort(sortByPopularity);
+              break;
+      };
+      photographer.media.sorting = action.payload.sorting;
     }
   }
 });
 
-export const { setData, toggleLike, updateSorting } = photographerSlice.actions;
+export const { setData, toggleLike, sortMedia } = photographerSlice.actions;
 export default photographerSlice.reducer;

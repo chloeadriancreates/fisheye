@@ -10,8 +10,11 @@ export const getData = async(dispatch) => {
             likeCounter += medium.likes;
         });
         photographer.totalLikes = likeCounter;
+        photographer.media = {
+            sorting: "Popularité",
+            list: responseJS.media.filter(media => media.photographerId === parseInt(photographer.id))
+        };
     });
     responseJS.media.forEach(medium => medium.liked = false);
-    responseJS.sorting = "Popularité";
     dispatch(setData(responseJS));
 };

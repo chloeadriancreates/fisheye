@@ -5,7 +5,9 @@
 
     &_thumbnail {
         @include mixins.transition;
-        @include mixins.resetLink;
+        background: none;
+        padding: 0;
+        border: none;
         display: block;
         position: relative;
         overflow: hidden;
