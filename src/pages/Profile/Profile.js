@@ -8,6 +8,7 @@ import PhotographerDetails from "./sections/PhotographerDetails/PhotographerDeta
 import MediaList from "./sections/MediaList/MediaList";
 import LikeTracker from "./sections/LikeTracker/LikeTracker";
 import Gallery from "./sections/Gallery/Gallery";
+import ContactForm from "./sections/ContactForm/ContactForm";
 
 export default function Profile() {
     const dispatch = useDispatch();
@@ -15,6 +16,7 @@ export default function Profile() {
     const { data } = useSelector(state => state.photographers);
     const [photographer, setPhotographer] = useState(null);
     const [gallery, setGallery] = useState(false);
+    const [modal, setModal] = useState(false);
     const [currentMedium, setCurrentMedium] = useState(null);
 
     const openGallery = (medium) => {
@@ -36,16 +38,28 @@ export default function Profile() {
         }
     }, [photographer]);
 
+    useEffect(() => {
+        if(document.querySelector(".profile")) {
+            document.querySelector(".profile").inert = modal;
+        }
+    }, [modal]);
+
     if(photographer) {
         if(gallery) {
             return <Gallery media={photographer.media.list} currentMedium={currentMedium} setGallery={setGallery} setCurrentMedium={setCurrentMedium} />;
         } else {
             return (
                 <div>
-                    <Header />
-                    <PhotographerDetails photographer={photographer} />
-                    <MediaList photographerId={id} openGallery={openGallery} />
-                    <LikeTracker rate={photographer.rate} likes={photographer.totalLikes} />
+                    { modal &&
+                        <ContactForm setModal={setModal} photographer={photographer} />
+                    }
+                    <section
+                    className={`profile ${modal && "profile--hidden"}`}>
+                        <Header />
+                        <PhotographerDetails photographer={photographer} setModal={setModal} />
+                        <MediaList photographerId={id} openGallery={openGallery} />
+                        <LikeTracker rate={photographer.rate} likes={photographer.totalLikes} />
+                    </section>
                 </div>
             );
         }

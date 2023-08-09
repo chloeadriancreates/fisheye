@@ -1,1 +1,10 @@
 @use "../../utils/mixins";
+
+.profile {
+    &--hidden {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        pointer-events: none;
+    }
+}
