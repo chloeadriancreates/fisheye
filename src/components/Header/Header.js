@@ -7,7 +7,7 @@ export default function Header() {
 
     return (
         <header className="header">
-            <Link to={"/"} className="header_link">
+            <Link to={"/"} className="header_link" title="Accueil">
                 <img src="/img/logo.png" className="header_link_logo" alt="Page d'accueil Fisheye" lang="fr" />
             </Link>
             { location.pathname === "/" && <h1 className="header_title">Nos photographes</h1> }

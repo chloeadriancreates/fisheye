@@ -11,7 +11,7 @@
     font-size: calc(20rem / 16);
     width: 100%;
 
-    @include mixins.mobileAndUp {
+    @include mixins.largeMobileAndUp {
         font-size: calc(24rem / 16);
         width: fit-content;
         right: 2.5rem;

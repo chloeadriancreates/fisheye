@@ -8,23 +8,25 @@
 
     &_section {
         @include mixins.flex(column, flex-start, center);
-        margin-top: 70px;
         padding: 30px;
         flex-grow: 1;
 
+        @include mixins.tabletAndUp {
+            margin-top: 50px;
+        }
+
         &_title {
             font-weight: normal;
-            font-size: 10rem;
+            font-size: 6rem;
             text-align: center;
             color: variables.$primary;
             line-height: 1;
-            margin-bottom: 3rem;
-
-            @include mixins.tinyScreens {
-                font-size: 6rem;
-            }
 
             @include mixins.mobileAndUp {
+                font-size: 10rem;
+            }
+
+            @include mixins.largeMobileAndUp {
                 font-size: 13rem;
             }
 
@@ -35,17 +37,22 @@
 
         &_description {
             font-weight: 300;
-            font-size: 2rem;
+            font-size: 1.5rem;
             text-align: center;
-            margin-bottom: 3rem;
+            margin: 2rem;
 
-            @include mixins.tinyScreens {
-                font-size: 1.5rem;
+            @include mixins.largeMobileAndUp {
+                font-size: 3rem;
+            }
+
+            @include mixins.laptopAndUp {
+                width: 70%;
             }
         }
 
         &_button {
             @include mixins.resetLink("white");
+            margin-top: 1rem;
         }
     } 
 }

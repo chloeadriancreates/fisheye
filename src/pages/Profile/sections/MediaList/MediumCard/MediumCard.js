@@ -13,7 +13,6 @@ export default function MediumCard({medium, openGallery}) {
                     alt={`${medium.title}, close-up view`}
                     lang="en"
                     className="mediumCard_thumbnail_medium"
-                    role="link"
                     >
                         <source
                         src={`/img/photographers/${medium.photographerId}/${medium.video}`}
@@ -26,7 +25,6 @@ export default function MediumCard({medium, openGallery}) {
                     alt={`${medium.title}, close-up view`}
                     lang="en"
                     className="mediumCard_thumbnail_medium"
-                    role="link"
                     />
                 }
                 <p className="mediumCard_thumbnail_alert">Ouvrir la galerie</p>

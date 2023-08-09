@@ -13,7 +13,6 @@ export default function Home() {
         if(!data) {
             getData(dispatch);
         }
-        console.log(data);
     }, [dispatch, data]);
 
     return (

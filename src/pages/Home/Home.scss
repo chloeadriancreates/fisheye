@@ -6,7 +6,7 @@
     grid-gap: 30px 90px;
     grid-template-columns: repeat(1, 1fr);
 
-    @include mixins.mobileAndUp {
+    @include mixins.largeMobileAndUp {
         margin: 0px 100px;
     }
 

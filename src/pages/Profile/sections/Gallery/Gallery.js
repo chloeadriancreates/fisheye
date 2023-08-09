@@ -7,7 +7,33 @@ export default function Gallery({media, currentMedium, setGallery, setCurrentMed
     const [nextMedium, setNextMedium] = useState(null);
     const [slideDirection, setSlideDirection] = useState(null);
     const currentIndex = media.indexOf(currentMedium);
-    const [windowWidth, setWindowWidth] = useState(0);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    const previous = () => {
+        galleryContent.style.animation = "slideOutPrevious 0.4s forwards ease";
+        setTimeout(function() {
+            setCurrentMedium(previousMedium);
+            setSlideDirection("Previous");
+        }, 300);
+    };
+
+    const next = () => {
+        galleryContent.style.animation = "slideOutNext 0.4s forwards ease";
+        setTimeout(function() {
+            setCurrentMedium(nextMedium);
+            setSlideDirection("Next");
+        }, 300);
+    };
+
+    document.onkeydown = (event) => {
+        if(event.code === "ArrowLeft") {
+            previous();
+        } else if(event.code === "ArrowRight") {
+            next();
+        } else if(event.code === "Escape") {
+            setGallery(false);
+        }
+    };
 
     useEffect(() => {
         window.addEventListener("resize", () => {
@@ -28,22 +54,6 @@ export default function Gallery({media, currentMedium, setGallery, setCurrentMed
             setNextMedium(media[currentIndex + 1]);
         }
     }, [currentIndex, media]);
-
-    const previous = () => {
-        galleryContent.style.animation = "slideOutPrevious 0.4s forwards ease";
-        setTimeout(function() {
-            setCurrentMedium(previousMedium);
-            setSlideDirection("Previous");
-        }, 300);
-    };
-
-    const next = () => {
-        galleryContent.style.animation = "slideOutNext 0.4s forwards ease";
-        setTimeout(function() {
-            setCurrentMedium(nextMedium);
-            setSlideDirection("Next");
-        }, 300);
-    };
 
     useEffect(() => {
         if(galleryContent) {
@@ -69,7 +79,6 @@ export default function Gallery({media, currentMedium, setGallery, setCurrentMed
                         lang="en"
                         className="gallery_content_display_medium"
                         controls="controls"
-                        role="link"
                         >
                             <source
                             src={`/img/photographers/${currentMedium.photographerId}/${currentMedium.video}`}
@@ -82,7 +91,6 @@ export default function Gallery({media, currentMedium, setGallery, setCurrentMed
                         alt={`${currentMedium.title}, close-up view`}
                         lang="en"
                         className="gallery_content_display_medium"
-                        role="link"
                         />
                     }
                     <div className="gallery_content_display_caption">

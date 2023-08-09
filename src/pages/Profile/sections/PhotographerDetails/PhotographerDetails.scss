@@ -11,7 +11,7 @@
         margin: 20px 60px;
     }
 
-    @include mixins.smallLaptopAndUp {
+    @include mixins.largeTabletAndUp {
         @include mixins.flex(row-reverse, space-between, center);
         margin: 40px 100px;
         padding: 50px;
@@ -20,7 +20,7 @@
     &_caption {
         margin: 30px;
 
-        @include mixins.smallLaptopAndUp {
+        @include mixins.largeTabletAndUp {
             margin: 0;
         }
 
@@ -41,7 +41,7 @@
                 font-size: 3rem;
             }
 
-            @include mixins.smallLaptopAndUp {
+            @include mixins.largeTabletAndUp {
                 font-size: 4rem;
             }
         }
@@ -72,11 +72,11 @@
         aspect-ratio: 1 / 1;
         object-fit: cover;
 
-        @include mixins.mobileAndUp {
+        @include mixins.largeMobileAndUp {
             aspect-ratio: 16 / 9;
         }
 
-        @include mixins.smallLaptopAndUp {
+        @include mixins.largeTabletAndUp {
             width: 300px;
             aspect-ratio: 1 / 1;
             border-radius: 50%;

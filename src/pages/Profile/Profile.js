@@ -45,26 +45,28 @@ export default function Profile() {
         }
     }, [modal]);
 
-    if(photographer) {
-        if(gallery) {
-            return <Gallery media={photographer.media.list} currentMedium={currentMedium} setGallery={setGallery} setCurrentMedium={setCurrentMedium} />;
+    if(photographer !== null) {
+        if(photographer) {
+            if(gallery) {
+                return <Gallery media={photographer.media.list} currentMedium={currentMedium} setGallery={setGallery} setCurrentMedium={setCurrentMedium} />;
+            } else {
+                return (
+                    <div>
+                        { modal &&
+                            <ContactForm setModal={setModal} photographer={photographer} />
+                        }
+                        <section
+                        className={`profile ${modal && "profile--hidden"}`}>
+                            <Header />
+                            <PhotographerDetails photographer={photographer} setModal={setModal} />
+                            <MediaList photographerId={id} openGallery={openGallery} />
+                            <LikeTracker rate={photographer.rate} likes={photographer.totalLikes} />
+                        </section>
+                    </div>
+                );
+            }
         } else {
-            return (
-                <div>
-                    { modal &&
-                        <ContactForm setModal={setModal} photographer={photographer} />
-                    }
-                    <section
-                    className={`profile ${modal && "profile--hidden"}`}>
-                        <Header />
-                        <PhotographerDetails photographer={photographer} setModal={setModal} />
-                        <MediaList photographerId={id} openGallery={openGallery} />
-                        <LikeTracker rate={photographer.rate} likes={photographer.totalLikes} />
-                    </section>
-                </div>
-            );
+            return <Error />;
         }
-    } else {
-        return <Error />;
     }
 }
