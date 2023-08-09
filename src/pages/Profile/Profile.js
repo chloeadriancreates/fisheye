@@ -31,7 +31,9 @@ export default function Profile() {
     }, [dispatch, data, id]);
 
     useEffect(() => {
-        console.log(photographer);
+        if(photographer) {
+            document.title = `${photographer.name} – Fisheye`;
+        }
     }, [photographer]);
 
     if(photographer) {

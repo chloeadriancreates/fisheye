@@ -2,55 +2,86 @@
 @use "../../../../utils/variables";
 
 .gallery {
-    @include mixins.flex(row, space-between, center);
+    @include mixins.flex(row, center, center);
     position: relative;
     background: white;
     height: 100vh;
     width: 100vw;
-    padding: 60px;
+    padding: 30px;
+
+    @include mixins.smallLaptopAndUp {
+        justify-content: space-between;
+        padding: 60px;
+    }
 
     &_nav {
-        background: none;
-        border: none;
-        
-        &--previous {
-            @include mixins.flex(column, flex-start, center);
-            margin-right: 2rem;
+        @include mixins.flex;
+        @include mixins.transition;
+        margin-top: 1rem;
+
+        @include mixins.mobileAndUp {
+            margin-top: 0;
         }
 
-        &--next {
-            @include mixins.flex(column, flex-end, center);
-            margin-left: 2rem;
-        }
+        &_button {
+            background: none;
+            border: none;
+            
+            &--previous {
+                @include mixins.flex(column, flex-start, center);
+                margin-right: 2rem;
 
-        &--close {
-            @include mixins.flex(column, center, center);
-            position: absolute;
-            top: 60px;
-            right: 60px;
-        }
-
-        &_icon {
-            font-size: 3rem;
-            color: variables.$primary;
-
-            &:hover {
-                cursor: pointer;
+                @include mixins.tinyScreens {
+                    margin-right: 1rem;
+                }
             }
-        }
 
-        &_text {
-            @include mixins.transition;
-            opacity: 0;
-            font-size: 1rem;
-            color: variables.$primary;
-            margin-top: 0.5rem;
-            transform: translateY(10px);
-        }
+            &--next {
+                @include mixins.flex(column, flex-end, center);
+                margin-right: 2rem;
 
-        &:hover &_text, &:focus &_text {
-            opacity: 1;
-            transform: translateY(0);
+                @include mixins.tinyScreens {
+                    margin-right: 1rem;
+                }
+
+                @include mixins.smallLaptopAndUp {
+                    margin-left: 2rem;
+                    margin-right: 0;
+                }
+            }
+
+            &--close {
+                @include mixins.flex(column, center, center);
+
+                @include mixins.smallLaptopAndUp {
+                    position: absolute;
+                    top: 60px;
+                    right: 60px;
+                }
+            }
+
+            &_icon {
+                font-size: 3rem;
+                color: variables.$primary;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            &_text {
+                @include mixins.transition;
+                opacity: 0;
+                font-size: 1rem;
+                color: variables.$primary;
+                margin-top: 0.5rem;
+                transform: translateY(10px);
+            }
+
+            &:hover &_text, &:focus &_text {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     }
 
@@ -65,41 +96,40 @@
             width: 100%;
             height: 100%;
 
-            &--hidden {
-                visibility: hidden;
+            &_medium {
+                max-height: 85%;
+                max-width: 100%;
+
+                @include mixins.smallLaptopAndUp {
+                    max-height: 95%;
+                }
             }
 
-            &_medium {
-                max-height: 95%;
-                max-width: 100%;
-            }
-    
-            &_title {
-                margin-top: calc(12rem / 16);
-                font-size: calc(24rem / 16);
-                color: variables.$primary;
+            &_caption {
+                @include mixins.flex(column, center, center);
+                width: 100%;
+                margin-top: 1rem;
+
+                @include mixins.mobileAndUp {
+                    @include mixins.flex(row, space-between, flex-start);
+                    margin-top: 2rem;
+                }
+
+                @include mixins.smallLaptopAndUp {
+                    margin-top: 0.5rem;
+                }
+
+                &_title {
+                    font-size: calc(24rem / 16);
+                    color: variables.$primary;
+                    margin-top: 0.5rem;
+
+                    @include mixins.smallLaptopAndUp {
+                        margin-top: 0;
+                    }
+                }
             }
         }
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
     }
 }
 

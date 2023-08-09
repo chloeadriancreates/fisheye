@@ -7,6 +7,13 @@ export default function Gallery({media, currentMedium, setGallery, setCurrentMed
     const [nextMedium, setNextMedium] = useState(null);
     const [slideDirection, setSlideDirection] = useState(null);
     const currentIndex = media.indexOf(currentMedium);
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            setWindowWidth(window.innerWidth);
+        });
+    }, []);
 
     useEffect(() => {
         if(currentIndex === 0) {
@@ -48,10 +55,12 @@ export default function Gallery({media, currentMedium, setGallery, setCurrentMed
 
     return (
         <div className="gallery">
-            <button onClick={previous} className="gallery_nav gallery_nav--previous">
-                <div className="gallery_nav_icon gallery_nav_icon--previous fas fa-chevron-left"></div>
-                <p className="gallery_nav_text gallery_nav_text--previous">Précédent</p>
-            </button>
+            { windowWidth >= 950 &&
+                <button onClick={previous} className="gallery_nav_button gallery_nav_button--previous">
+                    <div className="gallery_nav_button_icon gallery_nav_button_icon--previous fas fa-chevron-left"></div>
+                    <p className="gallery_nav_button_text gallery_nav_button_text--previous">Précédent</p>
+                </button>
+            }
             <div className="gallery_content">
                 <div className="gallery_content_display">
                     { currentMedium.video ?
@@ -76,17 +85,39 @@ export default function Gallery({media, currentMedium, setGallery, setCurrentMed
                         role="link"
                         />
                     }
-                    <h3 className="gallery_content_display_title">{currentMedium.title}</h3>
+                    <div className="gallery_content_display_caption">
+                        <h3 className="gallery_content_display_caption_title">{currentMedium.title}</h3>
+                        { windowWidth < 950 &&
+                            <div className="gallery_nav">
+                                <button onClick={previous} className="gallery_nav_button gallery_nav_button--previous">
+                                    <div className="gallery_nav_button_icon gallery_nav_button_icon--previous fas fa-chevron-left"></div>
+                                    <p className="gallery_nav_button_text gallery_nav_button_text--previous">Précédent</p>
+                                </button>
+                                <button onClick={next} className="gallery_nav_button gallery_nav_button--next">
+                                <div className="gallery_nav_button_icon gallery_nav_button_icon--next fas fa-chevron-right"></div>
+                                <p className="gallery_nav_button_text gallery_nav_button_text--next">Suivant</p>
+                                </button>
+                                <button onClick={() => setGallery(false)} className="gallery_nav_button gallery_nav_button--close">
+                                    <div className="gallery_nav_button_icon gallery_nav_button_icon--close fa-solid fa-xmark"></div>
+                                    <p className="gallery_nav_button_text gallery_nav_button_text--close">Fermer</p>
+                                </button>
+                            </div>
+                        }
+                    </div>
                 </div>
             </div>
-            <button onClick={next} className="gallery_nav gallery_nav--next">
-                <div className="gallery_nav_icon gallery_nav_icon--next fas fa-chevron-right"></div>
-                <p className="gallery_nav_text gallery_nav_text--next">Suivant</p>
-            </button>
-            <button onClick={() => setGallery(false)} className="gallery_nav gallery_nav--close">
-                <div className="gallery_nav_icon gallery_nav_icon--close fa-solid fa-xmark"></div>
-                <p className="gallery_nav_text gallery_nav_text--close">Fermer</p>
-            </button>
+            { windowWidth >= 950 &&
+                <button onClick={next} className="gallery_nav_button gallery_nav_button--next">
+                <div className="gallery_nav_button_icon gallery_nav_button_icon--next fas fa-chevron-right"></div>
+                <p className="gallery_nav_button_text gallery_nav_button_text--next">Suivant</p>
+                </button>
+            }
+            { windowWidth >= 950 &&
+                <button onClick={() => setGallery(false)} className="gallery_nav_button gallery_nav_button--close">
+                    <div className="gallery_nav_button_icon gallery_nav_button_icon--close fa-solid fa-xmark"></div>
+                    <p className="gallery_nav_button_text gallery_nav_button_text--close">Fermer</p>
+                </button>
+            }
         </div>
     );
 }
