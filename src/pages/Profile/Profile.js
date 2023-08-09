@@ -9,6 +9,7 @@ import MediaList from "./sections/MediaList/MediaList";
 import LikeTracker from "./sections/LikeTracker/LikeTracker";
 import Gallery from "./sections/Gallery/Gallery";
 import ContactForm from "./sections/ContactForm/ContactForm";
+import Error from "../Error/Error";
 
 export default function Profile() {
     const dispatch = useDispatch();
@@ -63,5 +64,7 @@ export default function Profile() {
                 </div>
             );
         }
+    } else {
+        return <Error />;
     }
 }

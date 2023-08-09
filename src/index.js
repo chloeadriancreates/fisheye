@@ -7,15 +7,18 @@ import { store } from "./app/store";
 import { Provider } from "react-redux";
 import Home from "./pages/Home/Home";
 import Profile from "./pages/Profile/Profile";
+import Error from "./pages/Error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />
+    element: <Home />,
+    errorElement: <Error />
   },
   {
     path: "/photographer/:id",
-    element: <Profile />
+    element: <Profile />,
+    errorElement: <Error />
   }
 ]);
 

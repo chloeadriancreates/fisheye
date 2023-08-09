@@ -1,0 +1,51 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
+.error{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    &_section {
+        @include mixins.flex(column, flex-start, center);
+        margin-top: 70px;
+        padding: 30px;
+        flex-grow: 1;
+
+        &_title {
+            font-weight: normal;
+            font-size: 10rem;
+            text-align: center;
+            color: variables.$primary;
+            line-height: 1;
+            margin-bottom: 3rem;
+
+            @include mixins.tinyScreens {
+                font-size: 6rem;
+            }
+
+            @include mixins.mobileAndUp {
+                font-size: 13rem;
+            }
+
+            @include mixins.tabletAndUp {
+                font-size: 18rem;
+            }
+        }
+
+        &_description {
+            font-weight: 300;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+
+            @include mixins.tinyScreens {
+                font-size: 1.5rem;
+            }
+        }
+
+        &_button {
+            @include mixins.resetLink("white");
+        }
+    } 
+}

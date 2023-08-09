@@ -11,6 +11,7 @@
     border: none;
     background-color: variables.$primary;
     border-radius: 5px;
+    text-align: center;
 
     @include mixins.mobileAndUp {
         font-size: calc(22rem / 16);
