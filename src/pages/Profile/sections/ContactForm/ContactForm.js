@@ -43,6 +43,7 @@ export default function ContactForm({setModal, photographer}) {
             console.log(`Expéditeur: ${formJson.firstName} ${formJson.lastName} (${formJson.email})`);
             console.log(`Destinataire: ${photographer.name} (#${photographer.id})`);
             console.log(`Message: ${formJson.message}`);
+            setModal(false);
         }
     };
 
