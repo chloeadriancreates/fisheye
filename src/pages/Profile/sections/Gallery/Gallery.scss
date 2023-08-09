@@ -19,7 +19,7 @@
         @include mixins.transition;
         margin-top: 1rem;
 
-        @include mixins.largeMobileAndUp {
+        @include mixins.largeTabletAndUp {
             margin-top: 0;
         }
 
@@ -92,7 +92,7 @@
         height: 100%;
 
         &_display {
-            @include mixins.flex(column, center, flex-start);
+            @include mixins.flex(column, center, center);
             width: 100%;
             height: 100%;
 
@@ -101,16 +101,20 @@
                 max-width: 100%;
 
                 @include mixins.largeTabletAndUp {
-                    max-height: 95%;
+                    max-height: 90%;
+                }
+
+                & > * {
+                    max-height: 100%;
+                    max-width: 100%;
                 }
             }
 
             &_caption {
                 @include mixins.flex(column, center, center);
-                width: 100%;
                 margin-top: 1rem;
 
-                @include mixins.mobileAndUp {
+                @include mixins.largeTabletAndUp {
                     @include mixins.flex(row, space-between, flex-start);
                     margin-top: 2rem;
                 }
@@ -123,10 +127,6 @@
                     font-size: calc(24rem / 16);
                     color: variables.$primary;
                     margin-top: 0.5rem;
-
-                    @include mixins.largeTabletAndUp {
-                        margin-top: 0;
-                    }
                 }
             }
         }

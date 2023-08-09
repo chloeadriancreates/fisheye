@@ -86,12 +86,21 @@ export default function Gallery({media, currentMedium, setGallery, setCurrentMed
                             />
                         </video>
                     :
-                        <img
-                        src={`/img/photographers/${currentMedium.photographerId}/${currentMedium.image}`}
-                        alt={`${currentMedium.title}, close-up view`}
-                        lang="en"
-                        className="gallery_content_display_medium"
-                        />
+                        <picture className="gallery_content_display_medium">
+                            <source
+                                srcSet={`/img/photographers/${currentMedium.photographerId}/${currentMedium.image}-500w.jpg`}
+                                media="(max-width: 300px)"
+                            />
+                            <source
+                                srcSet={`/img/photographers/${currentMedium.photographerId}/${currentMedium.image}-1000w.jpg`}
+                                media="(max-width: 560px)"
+                            />
+                            <img
+                                src={`/img/photographers/${currentMedium.photographerId}/${currentMedium.image}-2000w.jpg`}
+                                alt={`${currentMedium.title}, close-up view`}
+                                lang="en"
+                            />
+                        </picture>
                     }
                     <div className="gallery_content_display_caption">
                         <h3 className="gallery_content_display_caption_title">{currentMedium.title}</h3>

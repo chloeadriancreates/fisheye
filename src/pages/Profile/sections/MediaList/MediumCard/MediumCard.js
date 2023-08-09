@@ -20,12 +20,22 @@ export default function MediumCard({medium, openGallery}) {
                         />
                     </video>
                 :
-                    <img
-                    src={`/img/photographers/${medium.photographerId}/${medium.image}`}
-                    alt={`${medium.title}, close-up view`}
-                    lang="en"
-                    className="mediumCard_thumbnail_medium"
-                    />
+                    <picture>
+                        <source
+                            srcSet={`/img/photographers/${medium.photographerId}/${medium.image}-500w.jpg`}
+                            media="(max-width: 320px)"
+                        />
+                        <source
+                            srcSet={`/img/photographers/${medium.photographerId}/${medium.image}-1000w.jpg`}
+                            media="(max-width: 3380px)"
+                        />
+                        <img
+                            src={`/img/photographers/${medium.photographerId}/${medium.image}-2000w.jpg`}
+                            alt={`${medium.title}, close-up view`}
+                            lang="en"
+                            className="mediumCard_thumbnail_medium"
+                        />
+                    </picture>
                 }
                 <p className="mediumCard_thumbnail_alert">Ouvrir la galerie</p>
             </button>
