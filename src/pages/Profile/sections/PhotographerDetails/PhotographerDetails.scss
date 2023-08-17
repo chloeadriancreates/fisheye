@@ -33,35 +33,35 @@
         }
 
         &_name {
-            font-size: 2rem;
+            font-size: variables.$heading-small;
             color: variables.$secondary;
             font-weight: normal;
 
             @include mixins.mobileAndUp {
-                font-size: 3rem;
+                font-size: variables.$heading-large;
             }
 
             @include mixins.largeTabletAndUp {
-                font-size: 4rem;
+                font-size: variables.$heading-xlarge;
             }
         }
 
         &_location {
-            font-size: 1rem;
+            font-size: variables.$copy-medium;
             color: variables.$primary;
 
             @include mixins.mobileAndUp {
-                font-size: calc(22rem / 16);
+                font-size: variables.$copy-xlarge;
             }
         }
 
         &_tagline {
-            font-size: 1rem;
+            font-size: variables.$copy-medium;
             color: variables.$neutral-dark;
             margin-bottom: 1.5rem;
 
             @include mixins.mobileAndUp {
-                font-size: calc(22rem / 16);
+                font-size: variables.$copy-xlarge;
                 margin-bottom: 2rem;
             }
         }

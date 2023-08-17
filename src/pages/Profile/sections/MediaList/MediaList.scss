@@ -22,14 +22,14 @@
 
         &_label {
             font-weight: 700;
-            font-size: 0.8rem;
+            font-size: variables.$copy-small;
 
             @include mixins.mobileAndUp {
-                font-size: 1rem;
+                font-size: variables.$copy-medium;
             }
 
             @include mixins.largeMobileAndUp {
-                font-size: calc(18rem / 16);
+                font-size: variables.$copy-large;
             }
         }
 
@@ -37,10 +37,10 @@
             margin-left: 1rem;
             position: relative;
             width: fit-content;
-            font-size: 0.8rem;
+            font-size: variables.$copy-small;
 
             @include mixins.mobileAndUp {
-                font-size: calc(18rem / 16);
+                font-size: variables.$copy-large;
             }
 
             &_button {
@@ -56,14 +56,14 @@
                 }
 
                 &_text {
-                    font-size: 0.8rem;
+                    font-size: variables.$copy-small;
 
                     @include mixins.mobileAndUp {
-                        font-size: 1rem;
+                        font-size: variables.$copy-medium;
                     }
 
                     @include mixins.largeMobileAndUp {
-                        font-size: calc(18rem / 16);
+                        font-size: variables.$copy-large;
                     }
                 }
             }
@@ -74,7 +74,7 @@
                 background-color: variables.$primary;
                 color: white;
                 font-weight: 700;
-                font-size: 0.8rem;
+                font-size: variables.$copy-small;
                 font-family: "DM Sans", sans-serif;
                 height: calc(60rem / 16);
                 width: 100%;
@@ -86,11 +86,11 @@
                 z-index: 2;
 
                 @include mixins.mobileAndUp {
-                    font-size: 1rem;
+                    font-size: variables.$copy-medium;
                 }
 
                 @include mixins.largeMobileAndUp {
-                    font-size: calc(18rem / 16);
+                    font-size: variables.$copy-large;
                 }
 
                 &_option {
@@ -103,17 +103,17 @@
                     background-color: variables.$primary;
                     color: white;
                     font-weight: 700;
-                    font-size: 0.8rem;
+                    font-size: variables.$copy-small;
                     font-family: "DM Sans", sans-serif;
                     border: none;
                     box-shadow: none;
 
                     @include mixins.mobileAndUp {
-                        font-size: 1rem;
+                        font-size: variables.$copy-medium;
                     }
 
                     @include mixins.largeMobileAndUp {
-                        font-size: calc(18rem / 16);
+                        font-size: variables.$copy-large;
                     }
 
                     &:hover, &:focus {

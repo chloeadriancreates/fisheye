@@ -33,28 +33,28 @@
 
             &_header {
                 &_title {
-                    font-size: 2rem;
+                    font-size: variables.$heading-small;
                     font-weight: normal;
                     line-height: 1;
                     margin-bottom: 1rem;
 
                     @include mixins.mobileAndUp {
-                        font-size: 3rem;
+                        font-size: variables.$heading-large;
                     }
 
                     @include mixins.largeMobileAndUp {
-                        font-size: 4rem;
+                        font-size: variables.$heading-xlarge;
                     }
                 }
 
                 &_name {
-                    font-size: 1.5rem;
+                    font-size: variables.$copy-xlarge;
                     font-weight: normal;
                     line-height: 1;
                     margin-bottom: 1.5rem;
 
                     @include mixins.mobileAndUp {
-                        font-size: 2rem;
+                        font-size: variables.$heading-small;
                     }
                 }
             }
@@ -66,17 +66,17 @@
 
                 &_label {
                     color: #312E2E;
-                    font-size: 1.2rem;
+                    font-size: variables.$copy-large;
                 }
 
                 &_input {
                     width: 100%;
-                    font-size: calc(40rem / 16);
+                    font-size: variables.$heading-medium;
                     border: none;
                     border-radius: 5px;
                     margin: 0.5rem 0;
                     font-family: "DM Sans", sans-serif;
-                    font-size: 1.2rem;
+                    font-size: variables.$copy-large;
                     padding: 0.8rem;
 
                     &--textarea {
@@ -85,7 +85,7 @@
 
                     &::placeholder {
                         font-family: "DM Sans", sans-serif;
-                        font-size: 1.2rem;
+                        font-size: variables.$copy-large;
                         color: rgba(150, 150, 150, 1);
                     }
                 }
@@ -94,7 +94,7 @@
             &_submit {
                 @include mixins.transition;
                 font-family: "DM Sans", sans-serif;
-                font-size: 1rem;
+                font-size: variables.$copy-medium;
                 font-weight: bold;
                 color: white;
                 padding: 1rem;
@@ -104,7 +104,7 @@
                 margin-top: 1.5rem;
             
                 @include mixins.mobileAndUp {
-                    font-size: calc(22rem / 16);
+                    font-size: variables.$copy-xlarge;
                 }
             
                 &:hover {
@@ -119,7 +119,7 @@
 
             &_close {
                 @include mixins.flex(column, center, center);
-                font-size: calc(42rem / 16);
+                font-size: variables.$heading-medium;
                 position: absolute;
                 top: -7px;
                 right: 0;
@@ -134,7 +134,7 @@
                 &_text {
                     @include mixins.transition;
                     opacity: 0;
-                    font-size: 1rem;
+                    font-size: variables.$copy-medium;
                     color: white;
                     margin-top: 0.5rem;
                     transform: translateY(10px);

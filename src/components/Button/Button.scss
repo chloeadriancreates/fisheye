@@ -4,7 +4,7 @@
 .button {
     @include mixins.transition;
     font-family: "DM Sans", sans-serif;
-    font-size: 1rem;
+    font-size: variables.$copy-medium;
     font-weight: bold;
     color: white;
     padding: 1rem;
@@ -14,7 +14,7 @@
     text-align: center;
 
     @include mixins.mobileAndUp {
-        font-size: calc(22rem / 16);
+        font-size: variables.$copy-xlarge;
     }
 
     &:hover {

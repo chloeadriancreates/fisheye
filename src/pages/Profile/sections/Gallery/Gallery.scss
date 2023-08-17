@@ -61,7 +61,7 @@
             }
 
             &_icon {
-                font-size: 3rem;
+                font-size: variables.$heading-large;
                 color: variables.$primary;
 
                 &:hover {
@@ -72,7 +72,7 @@
             &_text {
                 @include mixins.transition;
                 opacity: 0;
-                font-size: 1rem;
+                font-size: variables.$copy-medium;
                 color: variables.$primary;
                 margin-top: 0.5rem;
                 transform: translateY(10px);
@@ -124,7 +124,7 @@
                 }
 
                 &_title {
-                    font-size: calc(24rem / 16);
+                    font-size: variables.$copy-xlarge;
                     color: variables.$primary;
                     margin-top: 0.5rem;
                 }

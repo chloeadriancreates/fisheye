@@ -28,11 +28,11 @@
             width: 100%;
             text-align: center;
             padding: 1rem 0;
-            font-size: 1rem;
+            font-size: variables.$copy-medium;
             background-color: variables.$secondary;
 
             @include mixins.largeMobileAndUp {
-                font-size: calc(24rem / 16);
+                font-size: variables.$copy-xlarge;
             }
         }
 
@@ -47,11 +47,11 @@
 
     &_caption {
         @include mixins.flex(row, space-between, center);
-        font-size: 1rem;
+        font-size: variables.$copy-medium;
         margin-top: calc(10rem / 16);
 
         @include mixins.largeMobileAndUp {
-            font-size: calc(24rem / 16);
+            font-size: variables.$copy-xlarge;
         }
 
         &_like {
@@ -64,7 +64,7 @@
                 background: none;
                 padding: 0;
                 transition: color 0.3s ease;
-                font-size: calc(18rem / 16);
+                font-size: variables.$copy-large;
 
                 &--liked {
                     color: variables.$primary;

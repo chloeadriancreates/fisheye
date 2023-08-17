@@ -19,7 +19,7 @@
 
     &_title {
         color: variables.$primary;
-        font-size: 2rem;
+        font-size: variables.$heading-small;
         display: none;
 
         @include mixins.tabletAndUp {

@@ -17,7 +17,7 @@
     }
 
     &_name {
-        font-size: 1.5rem;
+        font-size: variables.$copy-xlarge;
         font-weight: normal;
         margin-top: calc(20rem / 16);
         line-height: 1.2;
@@ -25,37 +25,37 @@
         color: variables.$secondary;
 
         @include mixins.mobileAndUp {
-            font-size: 2rem;
+            font-size: variables.$heading-small;
         }
     }
 
     &_location {
-        font-size: 0.8rem;
+        font-size: variables.$copy-small;
         color: variables.$primary;
         margin-top: calc(7rem / 16);
         text-align: center;
 
         @include mixins.mobileAndUp {
-            font-size: 0.9rem;
+            font-size: variables.$copy-medium;
         }
     }
 
     &_tagline {
-        font-size: 0.8rem;
+        font-size: variables.$copy-small;
         margin: calc(4rem / 16) 0;
         text-align: center;
 
         @include mixins.mobileAndUp {
-            font-size: 0.9rem;
+            font-size: variables.$copy-medium;
         }
     }
 
     &_rate {
-        font-size: 0.8rem;
+        font-size: variables.$copy-small;
         color: variables.$neutral-dark;
 
         @include mixins.mobileAndUp {
-            font-size: 0.9rem;
+            font-size: variables.$copy-medium;
         }
     }
 

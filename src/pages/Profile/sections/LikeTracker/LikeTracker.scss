@@ -8,14 +8,13 @@
     background-color: variables.$secondary;
     border-radius: 5px 5px 0px 0px;
     padding: 1rem 2rem;
-    font-size: calc(20rem / 16);
+    font-size: variables.$copy-large;
     width: 100%;
 
     @include mixins.largeMobileAndUp {
-        font-size: calc(24rem / 16);
+        font-size: variables.$copy-xlarge;
         width: fit-content;
         right: 2.5rem;
-        
     }
 
     &_likes {
