@@ -19,6 +19,10 @@ const router = createBrowserRouter([
     path: "/photographer/:id",
     element: <Profile />,
     errorElement: <Error />
+  },
+  {
+    path: "/error",
+    element: <Error />
   }
 ]);
 
